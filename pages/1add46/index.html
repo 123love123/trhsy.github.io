@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>如何为next主题添加不蒜子统计 | Sim-U</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="icon" href="/img/favicon.ico">
+    <meta name="description" content="MC 我的世界 模拟城市/模拟大都市模组">
+    <meta name="keywords" content="Mc,Minecraft,MC,我的世界,模拟城市,模拟大都市">
+    <meta name="baidu-site-verification" content="4G1r7N2b1UofcDFO">
+    <meta name="theme-color" content="#11a8cd">
+    
+    <link rel="preload" href="/assets/css/0.styles.aa88d43f.css" as="style"><link rel="preload" href="/assets/js/app.7034fd19.js" as="script"><link rel="preload" href="/assets/js/2.a6d93659.js" as="script"><link rel="preload" href="/assets/js/22.351b549b.js" as="script"><link rel="prefetch" href="/assets/js/10.21e0a582.js"><link rel="prefetch" href="/assets/js/11.f9e9580d.js"><link rel="prefetch" href="/assets/js/12.2499fe19.js"><link rel="prefetch" href="/assets/js/13.b245462f.js"><link rel="prefetch" href="/assets/js/14.b3cdbae3.js"><link rel="prefetch" href="/assets/js/15.9333cc53.js"><link rel="prefetch" href="/assets/js/16.c4f7d73f.js"><link rel="prefetch" href="/assets/js/17.044116be.js"><link rel="prefetch" href="/assets/js/18.58033fe6.js"><link rel="prefetch" href="/assets/js/19.5f3bf3ad.js"><link rel="prefetch" href="/assets/js/20.fa872f5e.js"><link rel="prefetch" href="/assets/js/21.dcfad995.js"><link rel="prefetch" href="/assets/js/23.07c07d5d.js"><link rel="prefetch" href="/assets/js/24.5423f3cd.js"><link rel="prefetch" href="/assets/js/25.eb553149.js"><link rel="prefetch" href="/assets/js/26.af95c10a.js"><link rel="prefetch" href="/assets/js/27.46e1f295.js"><link rel="prefetch" href="/assets/js/28.44c7660e.js"><link rel="prefetch" href="/assets/js/29.244cf603.js"><link rel="prefetch" href="/assets/js/3.2c5604fc.js"><link rel="prefetch" href="/assets/js/30.a8ee746d.js"><link rel="prefetch" href="/assets/js/31.610c50e2.js"><link rel="prefetch" href="/assets/js/32.23767bf0.js"><link rel="prefetch" href="/assets/js/33.302ff5d5.js"><link rel="prefetch" href="/assets/js/34.35fa7ba3.js"><link rel="prefetch" href="/assets/js/35.ab37217d.js"><link rel="prefetch" href="/assets/js/36.caedb73f.js"><link rel="prefetch" href="/assets/js/37.38dd7f25.js"><link rel="prefetch" href="/assets/js/4.133f02bd.js"><link rel="prefetch" href="/assets/js/5.08b44136.js"><link rel="prefetch" href="/assets/js/6.2f791569.js"><link rel="prefetch" href="/assets/js/7.2c998a55.js"><link rel="prefetch" href="/assets/js/8.97f6c075.js"><link rel="prefetch" href="/assets/js/9.59a02502.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.aa88d43f.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="Sim-U" class="logo"> <span class="site-name can-hide">Sim-U</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/posts/" class="nav-link">随笔</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="教程" class="dropdown-title"><a href="/course/" class="link-title">教程</a> <span class="title" style="display:none;">教程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.bilibili.com/video/BV1jY411j7xZ" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  视频教程
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="/course/1/" class="nav-link">详细教程</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/download/1/" class="nav-link">下载中心</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="联系我们" class="dropdown-title"><a href="/contact_us/1/" class="link-title">联系我们</a> <span class="title" style="display:none;">联系我们</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://qun.qq.com/qqweb/qunpro/share?_wv=3&amp;_wwv=128&amp;appChannel=share&amp;inviteCode=1W9y5py&amp;businessType=9&amp;from=246610&amp;biz=ka" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  官方频道
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://jq.qq.com/?_wv=1027&amp;k=QKukKTOy" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  官方Q群
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="https://cdn.jsdelivr.net/gh/trhsy/PicGo/img/t.png"> <div class="blogger-info"><h3>Trhsy</h3> <span>好傻的方块人</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/posts/" class="nav-link">随笔</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="教程" class="dropdown-title"><a href="/course/" class="link-title">教程</a> <span class="title" style="display:none;">教程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.bilibili.com/video/BV1jY411j7xZ" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  视频教程
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="/course/1/" class="nav-link">详细教程</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/download/1/" class="nav-link">下载中心</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="联系我们" class="dropdown-title"><a href="/contact_us/1/" class="link-title">联系我们</a> <span class="title" style="display:none;">联系我们</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://qun.qq.com/qqweb/qunpro/share?_wv=3&amp;_wwv=128&amp;appChannel=share&amp;inviteCode=1W9y5py&amp;businessType=9&amp;from=246610&amp;biz=ka" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  官方频道
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://jq.qq.com/?_wv=1027&amp;k=QKukKTOy" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  官方Q群
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>如何为next主题添加不蒜子统计</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/1add46/#字数统计" class="sidebar-link">字数统计</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/pages/1add46/#增加版权信息" class="sidebar-link">增加版权信息</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/pages/1add46/#个性化优化" class="sidebar-link">个性化优化</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/1add46/#设置字体" class="sidebar-link">设置字体</a></li><li class="sidebar-sub-header level3"><a href="/pages/1add46/#设置代码高亮主题" class="sidebar-link">设置代码高亮主题</a></li><li class="sidebar-sub-header level3"><a href="/pages/1add46/#设置小型代码块颜色" class="sidebar-link">设置小型代码块颜色</a></li><li class="sidebar-sub-header level3"><a href="/pages/1add46/#左上角或右上角的github样式" class="sidebar-link">左上角或右上角的Github样式</a></li><li class="sidebar-sub-header level3"><a href="/pages/1add46/#添加背景动画" class="sidebar-link">添加背景动画</a></li><li class="sidebar-sub-header level3"><a href="/pages/1add46/#添加顶部加载条" class="sidebar-link">添加顶部加载条</a></li><li class="sidebar-sub-header level3"><a href="/pages/1add46/#修改文章内链接文本样式" class="sidebar-link">修改文章内链接文本样式</a></li><li class="sidebar-sub-header level3"><a href="/pages/1add46/#修改文章底部标签样式" class="sidebar-link">修改文章底部标签样式</a></li><li class="sidebar-sub-header level3"><a href="/pages/1add46/#文章末尾统一添加-本文结束-标记" class="sidebar-link">文章末尾统一添加“本文结束”标记</a></li><li class="sidebar-sub-header level3"><a href="/pages/1add46/#修改作者头像并旋转" class="sidebar-link">修改作者头像并旋转</a></li></ul></li><li><a href="/pages/1add46/#文章添加阴影效果" class="sidebar-link">文章添加阴影效果</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/1add46/#修改打赏部分字体动画" class="sidebar-link">修改打赏部分字体动画</a></li><li class="sidebar-sub-header level3"><a href="/pages/1add46/#自定义鼠标样式" class="sidebar-link">自定义鼠标样式</a></li><li class="sidebar-sub-header level3"><a href="/pages/1add46/#修改文章页宽" class="sidebar-link">修改文章页宽</a></li><li class="sidebar-sub-header level3"><a href="/pages/1add46/#隐藏底部-强力驱动-内容" class="sidebar-link">隐藏底部&quot;强力驱动&quot;内容</a></li></ul></li></ul></section></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-06225672><div class="articleInfo" data-v-06225672><ul class="breadcrumbs" data-v-06225672><li data-v-06225672><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-06225672></a></li> <li data-v-06225672><a href="/posts/#随笔" data-v-06225672>随笔</a></li></ul> <div class="info" data-v-06225672><div title="作者" class="author iconfont icon-touxiang" data-v-06225672><a href="https://github.com/trhsy" target="_blank" title="作者" class="beLink" data-v-06225672>trhsy</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-06225672><a href="javascript:;" data-v-06225672>2019年8月14日12:48:54</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-title">目录</div> <div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABH1JREFUSA3tVl1oHFUUPmdmd2ltklqbpJDiNnXFmgbFktho7YMPNiJSSZM0+CAYSkUELVhM6YuwIPpgoOKDqOBDC0XE2CQoNtQXBUFTTcCi+Wlh1V2TQExsUzcltd3M9Tt3ZjZzZ2fT+OJTL8yeM+eee757fmeJbq//KQL8X3DUSFOcfr7cRsRtxNQMWueeVzOkaITIGqQHNg5y8+jNW9ldM7A6nTpAjuolUikAwq7CE3WcM2RRDz+XGVgN3FptU/aUSlvq9Pa3iZ1+sgAqJyyAFqkipd9dqiwHF3P65YycLWc/6sqGrvoEoIp6DOFaX5h6+dnfjkWprwqsPk0dUGq5vySwDImC10KxFHgGL1SWoc92O3eVht09qdXNH11I2SsTsJYqMWzihqGMi+A+Garf3BAuuLI5oGlULyNfyB/HYNujwktOfRrMr5t77NmevqaUopx0grnKAyvVpmwUDB4x6FPXuGvYLTDwWsejwgtgkYKPqRJg8SV6xaiZ3ZTppGneS4yfH5/66fZSDHv+QZci/+h5c5UHtpy67JUqGppM0sh0Nc1dW6/N1W5Yoqat8/TU/VnadmdeW2PLLSyh0cvxBs3KbqTmwYPpxN4do/mzE8nEpvX/UMu2Wbp74zUAK5q6WkHns7V0eWkdPbPzd3rxkTGybadYySumVzhcaJFbs5UrEkQ/+CK8gF5dnh/6ciIZ73gwQ927L1IitoxKLXYP3SjYdOrHHfTZhRRlFyrorafPk20B3HPD1y2G3qKZME5Jcf3t/HUC13/8tSd++vqFveMUTwAUxSUFI1QekR1+bIze3D9MF2aq6cPvG72CgnldWCFqyRw3lwH8ZMerjTD9ElRO7Gv44wNpC90aASqGfVlz/Rx17srQ57/UU26hkhQqUB7dBR71WmzQhHUnblGmVOEw0jhbV1n9OlXUDCIRGaNV5Jp43N516fN7JmnTHdfp7Hgy0luO4aMhtkLL8Bi3bUWYvzh5Mn1dTxrL6QmGuRhGL/TiTTxRoEdTszSaq9GR0NGA3KdkOz3hqSV3MIDhQ5IVX/Ivx3umBti2es2h4eZby7x8br1rkf7Mo90AqC8aQ3sJeNzqFRu+vSANAQe3PL7l0HGOAdwDCeZYvNKeoZp1Qfs6Aipndh86HmFRi0LAnEO47wsqM6cdfjh3jBPUzhZy7nvlUfFsamED1VQt6aISHVymXZ/B2aCtIG8AI8xfobj2d3en1wWVhOeHELKmLQ1s211s88comkv4UCwWyF787mJdYXtNfhKAXVqnKTq8QZvGAGGOfaTo5pGZ/PwbUCr5+DPr/1J92JNHr9aOl/F3iI5+O1nfybsGxoimvZ3ViWSluDITw3P37mypheDIPY0tw7+O/5ApbkYw+zpfaUVu32Pi98+defdUhEpZkRFq0aqyNh9FuL9hpYbEm6iwi0z2REd09ZmyENEbuhjDWzKvZXTqKYaBIr3tt5kuPtQBZFvEUwHt60vfCNu41XsksH9Ij1BMMz1Y0OOunHNShFIP5868g5zeXmuLwL9T4b6Q2+KejgAAAABJRU5ErkJggg==">如何为next主题添加不蒜子统计<!----></h1>  <div class="theme-vdoing-content content__default"><h1 id="如何为next主题添加不蒜子统计"><a href="#如何为next主题添加不蒜子统计" class="header-anchor">#</a> 如何为next主题添加不蒜子统计</h1> <p>打开next主题配置文件_config.yml
+搜索busuanzi_count修改为</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>busuanzi_count:
+  # count values only if the other configs are false
+  enable: true
+  # custom uv span for the whole site
+  site_uv: true
+  site_uv_header: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>fa fa-user<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> 本站访问数
+  site_uv_footer: 人
+  # custom pv span for the whole site
+  site_pv: true
+  site_pv_header: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>fa fa-eye<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> 本站总访问量
+  site_pv_footer: 次
+  # custom pv span for one page only
+  page_pv: false
+  page_pv_header: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>fa fa-file-o<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> 本文总阅读量
+  page_pv_footer: 次
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>完了之后你会发现并不能统计为啥呢，当时我也是一脑袋懵
+后来找度娘才发信原来是<a href="http://busuanzi.ibruce.info/?spm=a2c4e.11153940.blogcont648357.6.109231cbqdGC8o" target="_blank" rel="noopener noreferrer">官网地址<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>变了
+那就改吧，没办法只能自己搞了
+<code>themes\next\layout\_third-party\analytics\busuanzi-counter.swig</code>
+你项目的地址找到这个文件打开
+<img src="https://cdn.jsdelivr.net/gh/trhsy/PicGo/img/busuanzi.png" alt="busuanzi">
+我们发现跟官网上不一样白链接替换成
+<a href="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" target="_blank" rel="noopener noreferrer">https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>
+之后</p> <h2 id="字数统计"><a href="#字数统计" class="header-anchor">#</a> 字数统计</h2> <p>用于统计文章的字数以及分析出阅读时间。
+在主题配置文件中，搜索<code>wordcount</code>，设置为下面这样就可以了：</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code># Post wordcount display settings
+# Dependencies: https://github.com/willin/hexo-wordcount
+post_wordcount:
+  item_text: true
+  min2read: true
+  wordcount: true
+  separated_meta: true
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>再打开<code>\themes\next\layout\_macro\post.swig</code>文件，在leancloud-visitors-count后面位置添加一个分割符 |</p> <p>另外，在<code>/themes/next/layout/_partials/footer.swig</code>文件endif %}前加上下面代码可以实现在站点底部统计全站字数：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;div class=&quot;theme-info&quot;&gt;
+  &lt;span class=&quot;post-count&quot;&gt;Total Words:{{ totalcount(site) }}&lt;/span&gt;
+&lt;/div&gt;
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>如果无法显示可能是hexo-wordcount插件没有安装，git bash在网站根目录安装一下就可以：</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>npm install hexo-wordcount --save
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="增加版权信息"><a href="#增加版权信息" class="header-anchor">#</a> 增加版权信息</h2> <p>在目录<code>themes/next/layout/_macro/</code>下添加my-copyright.swig，代码如下：</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>{% if page.copyright %}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>my_post_copyright<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+  
+  <span class="token comment">&lt;!-- JS库 sweetalert 可修改路径 --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>https://unpkg.com/sweetalert/dist/sweetalert.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>本文标题:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{{ url_for(page.path) }}<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>{{ page.title }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>文章作者:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>/<span class="token punctuation">&quot;</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>访问 {{ theme.author }} 的个人博客<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>{{ theme.author }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>发布时间:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>{{ page.date.format(&quot;YYYY年MM月DD日 - HH:MM&quot;) }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>最后更新:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>{{ page.updated.format(&quot;YYYY年MM月DD日 - HH:MM&quot;) }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>原始链接:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{{ url_for(page.path) }}<span class="token punctuation">&quot;</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{{ page.title }}<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>{{ page.permalink }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>copy-path<span class="token punctuation">&quot;</span></span>  <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>点击复制文章链接<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>fa fa-clipboard<span class="token punctuation">&quot;</span></span> <span class="token attr-name">data-clipboard-text</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{{ page.permalink }}<span class="token punctuation">&quot;</span></span>  <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>复制成功！<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>许可协议:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>fa fa-creative-commons<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>license<span class="token punctuation">&quot;</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>https://creativecommons.org/licenses/by-nc-nd/4.0/<span class="token punctuation">&quot;</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>_blank<span class="token punctuation">&quot;</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>署名-非商业性使用-禁止演绎 4.0 国际<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span> 转载请保留原文链接及作者。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(&quot;.fa-clipboard&quot;).click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: &quot;&quot;,   
+          text: '复制成功',
+          icon: &quot;success&quot;, 
+          showConfirmButton: true
+          });
+    });
+    });  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+{% endif %}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><p>在目录<code>themes/next/source/css/_common/components/post/</code>下添加my-post-copyright.styl：</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">.my_post_copyright</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 85%<span class="token punctuation">;</span>
+  <span class="token property">max-width</span><span class="token punctuation">:</span> 45em<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 2.8em auto 0<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 0.5em 1.0em<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #d3d3d3<span class="token punctuation">;</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 0.93rem<span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> 1.6em<span class="token punctuation">;</span>
+  <span class="token property">word-break</span><span class="token punctuation">:</span> break-all<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>255<span class="token punctuation">,</span>255<span class="token punctuation">,</span>255<span class="token punctuation">,</span>0.4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.my_post_copyright p</span><span class="token punctuation">{</span><span class="token property">margin</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token selector">.my_post_copyright span</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 5.2em<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #b5b5b5<span class="token punctuation">;</span>
+  <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.my_post_copyright .raw</span> <span class="token punctuation">{</span>
+  <span class="token property">margin-left</span><span class="token punctuation">:</span> 1em<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 5em<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.my_post_copyright a</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #808080<span class="token punctuation">;</span>
+  <span class="token property">border-bottom</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.my_post_copyright a:hover</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #a3d2a3<span class="token punctuation">;</span>
+  <span class="token property">text-decoration</span><span class="token punctuation">:</span> underline<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.my_post_copyright:hover .fa-clipboard</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #000<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.my_post_copyright .post-url:hover</span> <span class="token punctuation">{</span>
+  <span class="token property">font-weight</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.my_post_copyright .copy-path</span> <span class="token punctuation">{</span>
+  <span class="token property">margin-left</span><span class="token punctuation">:</span> 1em<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 1em<span class="token punctuation">;</span>
+  <span class="token selector">+mobile()</span><span class="token punctuation">{</span><span class="token property">display</span><span class="token punctuation">:</span>none<span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.my_post_copyright .copy-path:hover</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #808080<span class="token punctuation">;</span>
+  <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br></div></div><p>修改<code>themes/next/layout/_macro/post.swig</code>，在代码:</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code> {% if theme.wechat_subscriber.enabled and not is_index %}
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+        {% include 'wechat-subscriber.swig' %}
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    {% endif %}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>添加</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+      {% if not is_index %}
+        {% include 'my-copyright.swig' %}
+      {% endif %}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>修改<code>themes/next/source/css/_common/components/post/post.styl</code>文件，在最后一行增加代码：</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code>@import <span class="token string">&quot;my-post-copyright&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>最后到站点根目录<code>/scaffolds/post.md</code>，在两个---中间增加一行：<code>copyright: true</code></p> <h2 id="个性化优化"><a href="#个性化优化" class="header-anchor">#</a> 个性化优化</h2> <h3 id="设置字体"><a href="#设置字体" class="header-anchor">#</a> 设置字体</h3> <p>在主题配置文件中设置，例如：</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>font:
+  enable: true
+
+  # Uri of fonts host. E.g. //fonts.googleapis.com (Default).
+  host: https://fonts.cat.net
+
+  # Font options:
+  # `external: true` will load this font family from `host` above.
+  # `family: Times New Roman`. Without any quotes.
+  # `size: xx`. Use `px` as unit.
+
+  # 全局字体，应用在 body 元素上 Global font settings used on <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span> element.
+  global:
+    external: true
+    family: Monda
+    size:
+
+  # Font settings for Headlines (h1, h2, h3, h4, h5, h6).
+  # Fallback to `global` font settings.
+  headings:
+    external: true
+    family: Roboto Slab
+    size:
+
+  # Font settings for posts.
+  #  文章字体Fallback to `global` font settings.
+  posts:
+    external: true
+    family:
+
+  # Font settings for Logo.
+  # Fallback to `global` font settings.
+  logo:
+    external: true
+    family: Lobster Two
+    size:
+
+  # 代码字体，应用于 code 以及代码块 Font settings for <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span><span class="token punctuation">&gt;</span></span> and code blocks.
+  codes:
+    external: true
+    family: PT Mono
+    size:
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br></div></div><h3 id="设置代码高亮主题"><a href="#设置代码高亮主题" class="header-anchor">#</a> 设置代码高亮主题</h3> <p>NexT 默认使用的是 normal 主题，可选的值有 normal，night， night blue， night bright， night eighties：</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code># Code Highlight theme
+# Available value:
+#    normal | night | night eighties | night blue | night bright
+# https://github.com/chriskempson/tomorrow-theme
+highlight_theme: normal
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="设置小型代码块颜色"><a href="#设置小型代码块颜色" class="header-anchor">#</a> 设置小型代码块颜色</h3> <p>修改<code>\themes\next\source\css\_variables\base.styl</code>文件，修改$code-background和$code-foreground的值：</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>$black-deep   = #222
+$red          = #ff2a2a
+$blue-bright  = #87daff
+$blue         = #0684bd
+$blue-deep    = #262a30
+$orange       = #fc6423
+// 自定义的颜色
+$my-code-foreground = #dd0055  // 用``围出的代码块字体颜色
+$my-code-background = #eee  // 用``围出的代码块背景颜色
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><div class="language-xml line-numbers-mode"><pre class="language-xml"><code>// Code &amp; Code Blocks
+// --------------------------------------------------
+$code-font-family               = $font-family-monospace
+$code-font-size                 = 13px
+$code-font-size                 = unit(hexo-config('font.codes.size'), px) if hexo-config('font.codes.size') is a 'unit'
+$code-border-radius             = 3px
+//$code-foreground                = $black-light
+//$code-background                = $gainsboro
+
+$code-background = $my-code-background 
+$code-foreground = $my-code-foreground
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>修改<code>themes\next\source\css\_custom\custom.styl</code>文件，加入自定义样式</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">// 文章``代码块的自定义样式
+code</span> <span class="token punctuation">{</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> 0px 3px<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #999<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>修改<code>themes\next\source\css\_custom\custom.styl</code>文件，加入自定义样式</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">//文章内链接文本样式
+.post-body p a</span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #0593d3<span class="token punctuation">;</span>
+  <span class="token property">border-bottom</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">border-bottom</span><span class="token punctuation">:</span> 1px solid #0593d3<span class="token punctuation">;</span>
+  <span class="token selector">&amp;:hover</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #fc6423<span class="token punctuation">;</span>
+    <span class="token property">border-bottom</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token property">border-bottom</span><span class="token punctuation">:</span> 1px solid #fc6423<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>修改<code>themes\next\source\css\_custom\custom.styl</code>文件，加入自定义样式</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">// [Read More]按钮样式
+.post-button .btn</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #555 <span class="token important">!important</span><span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span>255<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> 255<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 3px<span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+    <span class="token property">box-shadow</span><span class="token punctuation">:</span> inset 0px 0px 10px 0px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.35<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> none <span class="token important">!important</span><span class="token punctuation">;</span>
+    <span class="token property">transition-property</span><span class="token punctuation">:</span> unset<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 0px 15px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.post-button .btn:hover</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span>255<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> 255<span class="token punctuation">)</span> <span class="token important">!important</span><span class="token punctuation">;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 3px<span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+    <span class="token property">box-shadow</span><span class="token punctuation">:</span> inset 0px 0px 10px 0px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.35<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>90deg<span class="token punctuation">,</span> #a166ab 0%<span class="token punctuation">,</span> #ef4e7b 25%<span class="token punctuation">,</span> #f37055 50%<span class="token punctuation">,</span> #ef4e7b 75%<span class="token punctuation">,</span> #a166ab 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h3 id="左上角或右上角的github样式"><a href="#左上角或右上角的github样式" class="header-anchor">#</a> 左上角或右上角的Github样式</h3> <p>具体实现方式便是到<a href="https://link.jianshu.com/?t=http%3A%2F%2Ftholman.com%2Fgithub-corners%2F" target="_blank" rel="noopener noreferrer">样式1<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>或者<a href="https://link.jianshu.com/?t=https%3A%2F%2Fgithub.com%2Fblog%2F273-github-ribbons" target="_blank" rel="noopener noreferrer">样式2<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>的网站中选择你喜欢的样式，复制其中的代码到<code>themes/next/layout/_layout.swig</code>文件中(放在<code>&lt;div class=&quot;headband&quot;&gt;&lt;/div&gt;</code>的下面)，并把href改为你的github地址。</p> <h3 id="添加背景动画"><a href="#添加背景动画" class="header-anchor">#</a> 添加背景动画</h3> <p>NexT已经自带了多种背景动画效果，你只需要根据需求在主题配置文件修改其中一个为true即可。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code># Canvas-nest 
+canvas_nest: true
+
+# three_waves
+three_waves: false
+
+# canvas_lines
+canvas_lines: false
+
+# canvas_sphere
+canvas_sphere: false
+
+# Only fit scheme Pisces
+# Canvas-ribbon
+canvas_ribbon: false
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h3 id="添加顶部加载条"><a href="#添加顶部加载条" class="header-anchor">#</a> 添加顶部加载条</h3> <p>在主题配置文件中搜索pace：</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code># Progress bar in the top during page loading.
+pace: true
+# Themes list:
+#pace-theme-big-counter
+#pace-theme-bounce
+#pace-theme-barber-shop
+#pace-theme-center-atom
+#pace-theme-center-circle
+#pace-theme-center-radar
+#pace-theme-center-simple
+#pace-theme-corner-indicator
+#pace-theme-fill-left
+#pace-theme-flash
+#pace-theme-loading-bar
+#pace-theme-mac-osx
+#pace-theme-minimal
+# For example
+# pace_theme: pace-theme-center-simple
+pace_theme: pace-theme-flash
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h3 id="修改文章内链接文本样式"><a href="#修改文章内链接文本样式" class="header-anchor">#</a> 修改文章内链接文本样式</h3> <p>修改文件 <code>themes\next\source\css\_common\components\post\post.styl</code>，在末尾添加如下css样式</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 文章内链接文本样式
+.post-body p a{
+  color: #0593d3;
+  border-bottom: none;
+  border-bottom: 1px solid #0593d3;
+  &amp;:hover {
+    color: #fc6423;
+    border-bottom: none;
+    border-bottom: 1px solid #fc6423;
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h3 id="修改文章底部标签样式"><a href="#修改文章底部标签样式" class="header-anchor">#</a> 修改文章底部标签样式</h3> <p>修改<code>/themes/next/layout/_macro/post.swig</code>，搜索 <code>rel=&quot;tag&quot;&gt;#</code>，将 <code>#</code> 换成<code>&lt;i class=&quot;fa fa-tag&quot;&gt;&lt;/i&gt;</code></p> <h3 id="文章末尾统一添加-本文结束-标记"><a href="#文章末尾统一添加-本文结束-标记" class="header-anchor">#</a> 文章末尾统一添加“本文结束”标记</h3> <p>在路径<code>\themes\next\layout\_macro</code>中新建<code>passage-end-tag.swig</code>文件,并添加以下内容：</p> <div class="language-XML line-numbers-mode"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    {% if not is_index %}
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text-align:center;color: #555;font-size:14px;<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>-------------The End-------------<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    {% endif %}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>接着打开\themes\next\layout_macro\post.swig文件，在这个位置<code>wechat-subscriber.swig</code>上方添加代码：</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+  {% if not is_index %}
+    {% include 'passage-end-tag.swig' %}
+  {% endif %}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>然后打开主题配置文件，在末尾添加：</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code># 文章末尾添加“本文结束”标记
+passage_end_tag:
+  enabled: true
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="修改作者头像并旋转"><a href="#修改作者头像并旋转" class="header-anchor">#</a> 修改作者头像并旋转</h3> <p>打开<code>\themes\next\source\css\_common\components\sidebar\sidebar-author.styl</code>，在里面添加如下代码:</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">.site-author-image</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> $site-author-image-padding<span class="token punctuation">;</span>
+  <span class="token property">max-width</span><span class="token punctuation">:</span> $site-author-image-width<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> $site-author-image-height<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> $site-author-image-border-width solid $site-author-image-border-color<span class="token punctuation">;</span>
+  <span class="token comment">/* 头像圆形 */</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
+  <span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
+  <span class="token property">-moz-border-radius</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
+  <span class="token property">box-shadow</span><span class="token punctuation">:</span> inset 0 -1px 0 #333sf<span class="token punctuation">;</span>
+  <span class="token comment">/* 设置循环动画 [animation: (play)动画名称 (2s)动画播放时长单位秒或微秒 (ase-out)动画播放的速度曲线为以低速结束 
+    (1s)等待1秒然后开始动画 (1)动画播放次数(infinite为循环播放) ]*/</span>
+ 
+  <span class="token comment">/* 鼠标经过头像旋转360度 */</span>
+  <span class="token property">-webkit-transition</span><span class="token punctuation">:</span> -webkit-transform 1.0s ease-out<span class="token punctuation">;</span>
+  <span class="token property">-moz-transition</span><span class="token punctuation">:</span> -moz-transform 1.0s ease-out<span class="token punctuation">;</span>
+  <span class="token property">transition</span><span class="token punctuation">:</span> transform 1.0s ease-out<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">img:hover</span> <span class="token punctuation">{</span>
+  <span class="token comment">/* 鼠标经过停止头像旋转 
+  -webkit-animation-play-state:paused;
+  animation-play-state:paused;*/</span>
+  <span class="token comment">/* 鼠标经过头像旋转360度 */</span>
+  <span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">rotateZ</span><span class="token punctuation">(</span>360deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">-moz-transform</span><span class="token punctuation">:</span> <span class="token function">rotateZ</span><span class="token punctuation">(</span>360deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateZ</span><span class="token punctuation">(</span>360deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/* Z 轴旋转动画 */</span>
+<span class="token atrule"><span class="token rule">@-webkit-keyframes</span> play</span> <span class="token punctuation">{</span>
+  <span class="token selector">0%</span> <span class="token punctuation">{</span>
+    <span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">rotateZ</span><span class="token punctuation">(</span>0deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">100%</span> <span class="token punctuation">{</span>
+    <span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">rotateZ</span><span class="token punctuation">(</span>-360deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@-moz-keyframes</span> play</span> <span class="token punctuation">{</span>
+  <span class="token selector">0%</span> <span class="token punctuation">{</span>
+    <span class="token property">-moz-transform</span><span class="token punctuation">:</span> <span class="token function">rotateZ</span><span class="token punctuation">(</span>0deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">100%</span> <span class="token punctuation">{</span>
+    <span class="token property">-moz-transform</span><span class="token punctuation">:</span> <span class="token function">rotateZ</span><span class="token punctuation">(</span>-360deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@keyframes</span> play</span> <span class="token punctuation">{</span>
+  <span class="token selector">0%</span> <span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateZ</span><span class="token punctuation">(</span>0deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">100%</span> <span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateZ</span><span class="token punctuation">(</span>-360deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br></div></div><h2 id="文章添加阴影效果"><a href="#文章添加阴影效果" class="header-anchor">#</a> 文章添加阴影效果</h2> <p>打开<code>\themes\next\source\css\_custom\custom.styl</code>,向里面加入：</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>// 主页文章添加阴影效果
+ .post {
+   margin-top: 60px;
+   margin-bottom: 60px;
+   padding: 25px;
+   -webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5);
+   -moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);
+  }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h3 id="修改打赏部分字体动画"><a href="#修改打赏部分字体动画" class="header-anchor">#</a> 修改打赏部分字体动画</h3> <p>Next打赏部分的动画是鬼畜一般的不停地抖动，看着很难受，所以博主把它改为只循环三遍，打开文件<code>themes/next/source/css/_common/components/post/post-reward.styl</code>，把微信和支付宝的改为如下：</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">#wechat:hover p</span><span class="token punctuation">{</span>
+    <span class="token property">animation</span><span class="token punctuation">:</span> roll 0.1s 3 linear<span class="token punctuation">;</span>
+    <span class="token property">-webkit-animation</span><span class="token punctuation">:</span> roll 0.1s 3 linear<span class="token punctuation">;</span>
+    <span class="token property">-moz-animation</span><span class="token punctuation">:</span> roll 0.1s 3 linear<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">#alipay:hover p</span><span class="token punctuation">{</span>
+    <span class="token property">animation</span><span class="token punctuation">:</span> roll 0.1s 3 linear<span class="token punctuation">;</span>
+    <span class="token property">-webkit-animation</span><span class="token punctuation">:</span> roll 0.1s 3 linear<span class="token punctuation">;</span>
+    <span class="token property">-moz-animation</span><span class="token punctuation">:</span> roll 0.1s 3 linear<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h3 id="自定义鼠标样式"><a href="#自定义鼠标样式" class="header-anchor">#</a> 自定义鼠标样式</h3> <p>打开<code>themes/next/source/css/_custom/custom.styl</code>，添加代码：</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">// 鼠标样式
+  *</span> <span class="token punctuation">{</span>
+      <span class="token property">cursor</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">&quot;http://om8u46rmb.bkt.clouddn.com/sword2.ico&quot;</span><span class="token punctuation">)</span></span><span class="token punctuation">,</span>auto<span class="token important">!important</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">:active</span> <span class="token punctuation">{</span>
+      <span class="token property">cursor</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">&quot;http://om8u46rmb.bkt.clouddn.com/sword1.ico&quot;</span><span class="token punctuation">)</span></span><span class="token punctuation">,</span>auto<span class="token important">!important</span>
+  <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>其中 url 里面必须是 ico 图片，ico 图片可以上传到网上（推荐七牛云图床），然后获取外链，复制到 url 里就行了。</p> <h3 id="修改文章页宽"><a href="#修改文章页宽" class="header-anchor">#</a> 修改文章页宽</h3> <p>打开themes/next/source/css/_variables/base.styl，找到以下字段并修改为合适的宽度：</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>//$content-desktop-large          = 900px
+$content-desktop-large          = 1000px
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>修改<code>themes/next/layout/page.swig</code>文件，加入自定义样式:</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>{{ tagcloud({min_font: 13, max_font: 31, amount: 1000, color: true, start_color: '#9733EE', end_color: '#FF512F'}) }}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="隐藏底部-强力驱动-内容"><a href="#隐藏底部-强力驱动-内容" class="header-anchor">#</a> 隐藏底部&quot;强力驱动&quot;内容</h3> <p>修改<code>themes/next/_config.yml</code>文件,将powered和enable设置为false</p> <p>最后</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>hexo g
+hexo d
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>更新后你就会发现可以了
+如果本文对您有所帮助，请打赏给我吧，我先送个你也红包往下看，你可以把扫到红包打赏个我哦！
+<img src="https://cdn.jsdelivr.net/gh/trhsy/PicGo/img/hb.jpg" alt="红包"></p></div></div>  <div class="page-edit"><!----> <div class="tags"><a href="/tags/?tag=%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA" title="标签">#网站搭建</a><a href="/tags/?tag=%E4%B8%8D%E8%92%9C%E5%AD%90" title="标签">#不蒜子</a><a href="/tags/?tag=hexo" title="标签">#hexo</a><a href="/tags/?tag=next" title="标签">#next</a></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2022/08/11, 16:35:00</span></div></div> <div class="page-nav-wapper"><!----> <!----></div></div> <div class="article-list"><div class="article-title"><a href="/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/pages/fa3643/"><div>
+            飞机大战源码
+            <!----></div></a> <span class="date">10月25</span></dt></dl><dl><dd>02</dd> <dt><a href="/pages/e0e4ab/"><div>
+            网站使用next主题
+            <!----></div></a> <span class="date">10月30</span></dt></dl><dl><dd>03</dd> <dt><a href="/pages/c147b8/"><div>
+            为网站加上live2d看板娘
+            <!----></div></a> <span class="date">8月14日</span></dt></dl> <dl><dd></dd> <dt><a href="/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="mailto:trhsy_fan@163.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/trhsy" title="GitHub" target="_blank" class="iconfont icon-github"></a><a href="https://cdn.jsdelivr.net/gh/trhsy/PicGo/img/关注微信公众号获取更多资讯.jpg" title="公众号" target="_blank" class="iconfont icon-weixin"></a><a href="https://jq.qq.com/?_wv=1027&amp;k=QKukKTOy" title="QQ群" target="_blank" class="iconfont icon-QQ"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2022-2022
+    <span>Sim-U | By Trhsy</span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <!----></div><div class="global-ui"><div></div></div></div>
+    <script src="/assets/js/app.7034fd19.js" defer></script><script src="/assets/js/2.a6d93659.js" defer></script><script src="/assets/js/22.351b549b.js" defer></script>
+  </body>
+</html>
