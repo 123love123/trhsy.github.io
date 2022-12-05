@@ -1,0 +1,3 @@
+蓝图解压到mods文件夹下的sim文件夹下
+
+正确路径为 /mods/sim/buildings
